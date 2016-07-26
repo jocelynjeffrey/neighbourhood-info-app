@@ -6,33 +6,42 @@ function initMap() {
     zoom: 15
   });
 
-  var home = new google.maps.Marker({
-    position: { lat: 43.684820, lng: -79.397876 },
-    map: map,
-    title: 'house!'
+  var locationsArr = [
+    {
+      name: 'home',
+      position: { lat: 43.684820, lng: -79.397876 },
+      title: 'house!'
+    },
+    {
+      name: 'Deer Park dog park',
+      position: {lat: 43.6828344, lng: -79.4087779},
+      title: 'dog park!'
+    },
+    {
+      name: 'Rosedale Ravine',
+      position: {lat: 43.68838, lng: -79.38768},
+      title: 'ravine!'
+    },
+    {
+      name: 'Rosedale Reservoir',
+      position: {lat: 43.685557, lng: -79.390325},
+      title: 'reservoir!'
+    },
+    {
+      name: 'Summerhill',
+      position: {lat: 43.6803975, lng: -79.3909196},
+      title: 'summerhill!'
+    },
+  ];
+
+  //loop through arr and set each object as new google.maps.Marker obj
+  locationsArr.forEach(function(location){
+    var location = new google.maps.Marker({
+      position: location.position,
+      map: map,
+      title: location.title
+    });
   });
 
-  var dogPark = new google.maps.Marker({
-    position: {lat: 43.6828344, lng: -79.4087779},
-    map: map,
-    title: 'dogpark!'
-  });
-
-  var rosedaleRavine = new google.maps.Marker({
-    position: {lat: 43.68838, lng: -79.38768},
-    map: map,
-    title: 'ravine!'
-  });
-
-    var rosedaleReservoir = new google.maps.Marker({
-    position: {lat: 43.685557, lng: -79.390325},
-    map: map,
-    title: 'reservoir!'
-  });
-
-    var summerhill = new google.maps.Marker({
-    position: {lat: 43.6803975, lng: -79.3909196},
-    map: map,
-    title: 'summerhill!'
-  });
+    return locationsArr;
 }

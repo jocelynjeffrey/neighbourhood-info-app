@@ -1,13 +1,24 @@
-// This is a simple *viewmodel* - JavaScript that defines the data and behavior of your UI
-function AppViewModel() {
-    this.firstName = ko.observable("Bert");
-    this.lastName = ko.observable("Bertington");
-    
-    this.fullName = ko.computed(function() {
-    return this.firstName() + " " + this.lastName();    
-    }, this);
+// This is a simple *viewmodel* - JavaScript that defines 
+//the data and behavior of your UI
 
-}
+$(function(){
 
-// Activates knockout.js
-ko.applyBindings(new AppViewModel());
+var AppViewModel = {
+	init: function(){
+  	this.location = ko.observable("Toronto");
+		ko.applyBindings(AppViewModel);
+		view.init();
+	}
+
+};
+
+var view = {
+  init: function() {
+  	console.log('view initialized');
+
+  },
+
+};
+
+AppViewModel.init();
+});
