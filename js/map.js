@@ -8,7 +8,7 @@ function initMap() {
 
   var locationsArr = [
     {
-      name: 'home',
+      name: '109 Balmoral Ave',
       position: { lat: 43.684820, lng: -79.397876 },
       title: 'house!'
     },
