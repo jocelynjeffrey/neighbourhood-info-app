@@ -52,18 +52,22 @@ function getLocations(data){
   var promise = new Promise(function(resolve, reject) {
 
   if (data) {
-    console.log(data)
+    // console.log(data)
     resolve("Stuff worked!");
   }
   else {
-    reject(Error("problem location info"));
+    reject(Error("problem with location info"));
   }
+
+  return promise;
 });
 
 promise.then(function(result) {
+  // console.log(data)
+  console.log(result);
   return data;
 }, function(err) {
-  console.log(err); 
+  console.log(err);
 });
 
 
