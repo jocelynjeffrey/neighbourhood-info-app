@@ -27,7 +27,7 @@
 //     },
 //   ]
 
-var mapLocations = getLocations();
+// var mapLocations = getLocations();
 
 var Location = function(data){
 	this.name = ko.observable(data.name);
@@ -36,11 +36,12 @@ var Location = function(data){
 var AppViewModel = function(){
 	var self = this;
 
-	this.locationsList = ko.observableArray([]);
+	this.locationsList = ko.observableArray(getLocations());
+	
 
-	mapLocations.forEach(function(locationItem){
-		self.locationsList.push( new Location (locationItem));
-	})
+	// mapLocations.forEach(function(locationItem){
+	// 	self.locationsList.push( new Location (locationItem));
+	// })
 
 	// this.currentLocation = ko.observableArray( this.locationsList()[0]) ;
 
