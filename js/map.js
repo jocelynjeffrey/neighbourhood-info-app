@@ -1,6 +1,6 @@
 var map;
 
-function initMap() {
+function _initMap() {
   map = new google.maps.Map(document.getElementById('googleMap'), {
     center: { lat: 43.684820, lng: -79.397876 },
     zoom: 15
@@ -8,7 +8,7 @@ function initMap() {
 
   var locationsArr = [
     {
-      name: '109 Balmoral Ave',
+      name: 'home',
       position: { lat: 43.684820, lng: -79.397876 },
       title: 'house!'
     },
@@ -36,12 +36,48 @@ function initMap() {
 
   //loop through arr and set each object as new google.maps.Marker obj
   locationsArr.forEach(function(location){
-    var location = new google.maps.Marker({
+    var marker = new google.maps.Marker({
       position: location.position,
       map: map,
       title: location.title
     });
   });
 
-    return locationsArr;
+    getLocations(locationsArr);
 }
+
+
+function getLocations(data){
+
+  var promise = new Promise(function(resolve, reject) {
+
+  if (data) {
+    console.log(data)
+    resolve("Stuff worked!");
+  }
+  else {
+    reject(Error("problem location info"));
+  }
+});
+
+promise.then(function(result) {
+  return data;
+}, function(err) {
+  console.log(err); 
+});
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
