@@ -1,7 +1,7 @@
 var mapLocations = locations;
 
-var Location = function(data){
-	this.name = ko.observable(data);
+var Location = function(locationObj){
+	this.name = ko.observable(locationObj.name);
 };
 
 var AppViewModel = function(){
