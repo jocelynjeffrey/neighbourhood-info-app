@@ -1,38 +1,39 @@
 
-var mapLocations = [
-    {
-      name: 'home',
-      position: { lat: 43.684820, lng: -79.397876 },
-      title: 'house!'
-    },
-    {
-      name: 'Deer Park dog park',
-      position: {lat: 43.6828344, lng: -79.4087779},
-      title: 'dog park!'
-    },
-    {
-      name: 'Rosedale Ravine',
-      position: {lat: 43.68838, lng: -79.38768},
-      title: 'ravine!'
-    },
-    {
-      name: 'Rosedale Reservoir',
-      position: {lat: 43.685557, lng: -79.390325},
-      title: 'reservoir!'
-    },
-    {
-      name: 'Summerhill',
-      position: {lat: 43.6803975, lng: -79.3909196},
-      title: 'summerhill!'
-    },
-  ];
+// var mapLocations = [
+//     {
+//       name: 'test',
+//       position: { lat: 43.684820, lng: -79.397876 },
+//       title: 'house!'
+//     },
+//     {
+//       name: 'Deer Park dog park',
+//       position: {lat: 43.6828344, lng: -79.4087779},
+//       title: 'dog park!'
+//     },
+//     {
+//       name: 'Rosedale Ravine',
+//       position: {lat: 43.68838, lng: -79.38768},
+//       title: 'ravine!'
+//     },
+//     {
+//       name: 'Rosedale Reservoir',
+//       position: {lat: 43.685557, lng: -79.390325},
+//       title: 'reservoir!'
+//     },
+//     {
+//       name: 'Summerhill',
+//       position: {lat: 43.6803975, lng: -79.3909196},
+//       title: 'summerhill!'
+//     },
+//   ];
 
     // mapLocations.forEach(function (location) {
     // 	setMarkers();
     // });
 
 
-// var mapLocations = setMarkers();
+var mapLocations = locations;
+console.log(locations)
 
 
 var Location = function(data){
