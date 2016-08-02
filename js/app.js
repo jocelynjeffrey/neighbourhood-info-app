@@ -24,8 +24,6 @@ var AppViewModel = function(){
 
 
   self.search = function(value) {
-
-    console.log(value)
     // remove all the current locations, which removes them from the view
    self.locationsList.removeAll();
 
@@ -35,7 +33,6 @@ var AppViewModel = function(){
         self.locationsList.push(mapLocations[x]);
       }
 
-      
     }
   }
 

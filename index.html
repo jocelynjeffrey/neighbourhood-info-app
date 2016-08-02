@@ -8,19 +8,13 @@
   </head>
   <body>
 
-
-<!--     <ul data-bind="foreach:locationsList">
-      <li data-bind="text: name"></li> -->
+    <input placeholder="Search…" type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off">
 
       <ul data-bind="template: {name:'location', foreach:locationsList}"></ul>
       <script type="text/html" id="location">
         <li data-bind="text: name"></li>
       </script>
     
-<!--     <p>Location: <input placeholder="Search" type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off"/></p> -->
-
-    <input placeholder="Search…" type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off">
-
     <div id="googleMap"></div>
 
     <script type="text/javascript" src="js/lib/knockout-3.2.0.js"></script>
