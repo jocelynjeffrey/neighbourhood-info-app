@@ -1,56 +1,19 @@
-
-// var mapLocations = [
-//     {
-//       name: 'test',
-//       position: { lat: 43.684820, lng: -79.397876 },
-//       title: 'house!'
-//     },
-//     {
-//       name: 'Deer Park dog park',
-//       position: {lat: 43.6828344, lng: -79.4087779},
-//       title: 'dog park!'
-//     },
-//     {
-//       name: 'Rosedale Ravine',
-//       position: {lat: 43.68838, lng: -79.38768},
-//       title: 'ravine!'
-//     },
-//     {
-//       name: 'Rosedale Reservoir',
-//       position: {lat: 43.685557, lng: -79.390325},
-//       title: 'reservoir!'
-//     },
-//     {
-//       name: 'Summerhill',
-//       position: {lat: 43.6803975, lng: -79.3909196},
-//       title: 'summerhill!'
-//     },
-//   ];
-
-    // mapLocations.forEach(function (location) {
-    // 	setMarkers();
-    // });
-
-
 var mapLocations = locations;
-console.log(locations)
-
 
 var Location = function(data){
-	this.name = ko.observable(data.name);
+	this.name = ko.observable(data);
 };
 
 var AppViewModel = function(){
 	var self = this;
 
-	this.locationsList = ko.observableArray();
-	window.test2 = this.locationsList;
+	self.locationsList = ko.observableArray();
 
-	// mapLocations.forEach(function(locationItem){
-	// 	self.locationsList.push( new Location (locationItem));
-	// })
+	mapLocations.forEach(function(locationItem){
+		self.locationsList.push( new Location (locationItem));
+	})
 
-	// this.currentLocation = ko.observableArray( this.locationsList()[0]) ;
+	self.currentLocation = ko.observableArray( self.locationsList()) ;
 
 };
 
