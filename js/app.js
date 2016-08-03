@@ -11,16 +11,10 @@ var AppViewModel = function(){
   self.query = ko.observable('');
 
 	self.locationsList = ko.observableArray();
-  console.log(self.locationsList);
 
 	mapLocations.forEach(function(locationItem){
 		self.locationsList.push( new Location (locationItem));
-    console.log(self.locationsList)
 	});
-
-	// self.currentLocation = ko.observableArray( self.locationsList()) ;
-
-
 
 
   self.search = function(value) {
