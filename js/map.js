@@ -20,7 +20,7 @@ function setMarkers(map) {
       map: map,
       title: location.title,
     });
- })
+ });
 }
 
 var locations = [
@@ -51,14 +51,14 @@ var locations = [
     },
   ];
 
-return { 
+return {
   locations: function(){
     return locations;
   },
   initMap: function(){
     initMap();
-  } 
-}
+  }
+};
 
 }());
 
