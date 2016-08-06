@@ -1,4 +1,4 @@
-
+var googleMap = (function(){
 var map;
 
 function initMap() {
@@ -50,3 +50,14 @@ var locations = [
       title: 'summerhill!'
     },
   ];
+
+return { 
+  locations: function(){
+    return locations;
+  },
+  initMap: function(){
+    initMap();
+  } 
+}
+
+}());
