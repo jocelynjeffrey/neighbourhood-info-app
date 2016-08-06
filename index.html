@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="css/break1.css">
   </head>
   <body>
+    <ul data-bind="foreach: products">
+    <li class="product">
+        <strong data-bind="text: name"></strong>
+        <like-widget params="value: userRating"></like-widget>
+    </li>
+</ul>
 
     <input placeholder="Search…" type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off">
 
