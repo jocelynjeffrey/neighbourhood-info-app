@@ -51,6 +51,7 @@ var locations = [
     },
   ];
 
+<<<<<<< HEAD
 return { 
   locations: function(){
     return locations;
@@ -61,3 +62,5 @@ return {
 }
 
 }());
+=======
+>>>>>>> 5e34fe2f68eaf413d5da2bd22f7febbd5ced2ef7
