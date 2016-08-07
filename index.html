@@ -10,16 +10,46 @@
 
     <input placeholder="Search…" type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off">
 
-      <ul data-bind="template: {name:'location', foreach:locationsList}"></ul>
+      <ul data-bind="template: { name:'location', foreach:locationsList }"></ul>
       <script type="text/html" id="location">
-        <li data-bind="text: name"></li>
+        <li style="cursor:pointer" data-bind="text: name, click: $parent.showLocationInfo"></li>
       </script>
+
+
+
+  <div style="border:2px solid red" id="selectedLocation" data-bind="with:currentLocation">
+    <h2 data-bind="text: name"></h2>
+    <p data-bind="text: title"></p>
+  </div>
+
+
+<!--   <div id="cat" data-bind="with:currentCat">
+    <h2 data-bind="text: name"></h2>
+    <div data-bind="text: clickCount"></div>
+    <div data-bind="text: catLevel"></div>
+    <img data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}" alt="cute cat">
+
+    <h2>Nicknames:</h2>
+    <ul data-bind="foreach: names">
+      <li data-bind="text: $data"></li>
+    </ul>
+
+  </div> -->
+
+
+
+
+
+
+
     
     <div id="googleMap"></div>
 
     
     <script type="text/javascript" src="js/lib/knockout-3.2.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+    <script src="js/models/locations.js"></script>
     <script src="js/map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaSQEh_2A8AhPfEK7-tdvy1NYdykg0i1s&callback=googleMap.initMap&libraries=visualization"
     async defer></script>   
